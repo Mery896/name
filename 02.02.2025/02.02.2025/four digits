@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+    int num;
+    std::cout << "Enter the number: ";
+    std::cin >> num;
+
+    if (num >= 1000 && num <= 9999) {
+        int sum = 0;
+        sum += num % 10;       
+        num /= 10;
+        
+        sum += num % 10;       
+        num /= 10;
+        
+        sum += num % 10;      
+        num /= 10;
+        
+        sum += num % 10;       
+
+        std::cout << "Sum of digits: " << sum << std::endl;
+    } else {
+       std::cout << "The entered number have not four digits!" << std::endl;
+    }
+
+    return 0;
+}
